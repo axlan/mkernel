@@ -12,18 +12,26 @@ This is a minimalist kernel which prints "`my first kernel`" on the screen and t
 
 #### Build commands ####
 ```
-nasm -f elf32 kernel.asm -o kasm.o
-```
-```
-gcc -m32 -c kernel.c -o kc.o
-```
-```
-ld -m elf_i386 -T link.ld -o kernel kasm.o kc.o
+make kernel
 ```
 
 #### Test on emulator ####
 ```
-qemu-system-i386 -kernel kernel
+make run
+```
+
+#### To test with GRUB ####
+
+To generate a grub image
+
+```
+make grub.img
+```
+
+To test in QEMU
+
+```
+make run-grub
 ```
 
 #### Get to boot ####

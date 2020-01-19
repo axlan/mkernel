@@ -1,0 +1,5 @@
+grub.img
+kernel
+kasm.o
+iso/boot/kernel-701
+kc.o
